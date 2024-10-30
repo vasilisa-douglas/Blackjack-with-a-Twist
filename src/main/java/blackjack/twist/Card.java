@@ -16,6 +16,7 @@ public class Card
      * Constructor
      * @param suit - the suit of the card
      * @param rank - the rank of the card (1 = Ace, 11 = Jack, 12 = Queen, 13 = King)
+     * note for future consideration - Ace can hold value of 1 or 11
      */
     public Card(Suit suit, int rank)
     {

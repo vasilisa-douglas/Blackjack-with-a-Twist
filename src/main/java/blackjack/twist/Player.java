@@ -27,6 +27,9 @@ public class Player
     public Card drawCard()
     {
         Card card = new Card();
+        card.generateCard();
+        playerHand.addCard(playerHand, card);
+        
         return card;
     }
     

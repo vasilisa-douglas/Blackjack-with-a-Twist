@@ -23,10 +23,14 @@ public class Dealer
     /**
      * drawCard()
      * @return - returns the card that is drawn
+     * adds the drawn card to the dealerHand
      */
     public Card drawCard()
     {
         Card card = new Card();
+        card.generateCard();
+        dealerHand.addCard(dealerHand, card);
+        
         return card;
     }
 }

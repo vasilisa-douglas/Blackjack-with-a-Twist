@@ -14,13 +14,15 @@ public class Card
 
     /**
      * Constructor
-     * @param suit - the suit of the card
-     * @param rank - the rank of the card (1 = Ace, 11 = Jack, 12 = Queen, 13 = King)
+     * param suit - the suit of the card
+     * param rank - the rank of the card (1 = Ace, 11 = Jack, 12 = Queen, 13 = King)
+     * note for future consideration - Ace can hold value of 1 or 11
      */
-    public Card(Suit suit, int rank)
-    {
-        this.suit = suit;
-        this.rank = rank;
+    //public Card(Suit suit, int rank)
+    public Card()        //made this constructor empty so it's possible to 
+    {                    //instantiate object before calling generateCard
+        //this.suit = suit;
+        //this.rank = rank;
     }
 
     /**
@@ -30,10 +32,10 @@ public class Card
     {
         Random random = new Random();
         Suit[] suits = Suit.values();
-        Suit randomSuit = suits[random.nextInt(suits.length)];
-        int randomRank = random.nextInt(13) + 1;  // Ranks from 1 to 13
-
-        return new Card(randomSuit, randomRank);
+        suit = suits[random.nextInt(suits.length)];
+        rank = random.nextInt(13) + 1;  // Ranks from 1 to 13
+        
+        return this;
     }
 
     /**

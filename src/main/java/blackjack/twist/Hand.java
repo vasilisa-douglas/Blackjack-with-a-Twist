@@ -30,7 +30,12 @@ public class Hand
      */
     public int sumHand(Hand cardHand)
     {
-        return 0;
+        int sum = 0;
+        for(int i = 0; i < cardHand.cards.size(); i++)
+        {
+            sum += cardHand.cards.get(i).getRank();
+        }
+        return sum;
     }
     
     /**
@@ -38,10 +43,9 @@ public class Hand
      * @param cardHand - a Hand object
      * @param card - Card object to be added to the Hand cardHand
      */
-
     public void addCard(Hand cardHand, Card card)
     {
-        
+        cardHand.cards.add(card);
     }
 
 }
